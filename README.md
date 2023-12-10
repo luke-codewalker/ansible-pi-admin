@@ -21,7 +21,7 @@ This is the first step: listing all tasks I need to perform (list might grow ove
     - [ ] some words about network setup (also see network topology but here for Pi: like disabling Wifi with dt-overlay etc.)
 - [ ] k3s setup
     - [ ] Pi config (memory and something else?) for k3s
-    - [ ] installing k3s (control plane or worker node)
+    - [ ] [installing k3s (control plane or worker node)](Kubernetes-Setup.md)
     - [ ] ability to uninstall
     - [ ] repair, diagnose (logs, systemctl restart etc.?)
     - [ ] permissions/security? need to read up on this
