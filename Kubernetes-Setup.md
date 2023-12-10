@@ -12,6 +12,10 @@ To cluster my Raspberry Pis together I use Kubernetes and more specifically "lig
 3. Install on agent node
     - Todo
 
+## Tips
+
+- uninstall k3s on control plane by running `/usr/local/bin/k3s-uninstall.sh` 
+
 
 ## Sources
 - https://docs.k3s.io/quick-start
