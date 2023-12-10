@@ -15,7 +15,7 @@ This is the first step: listing all tasks I need to perform (list might grow ove
         - [ ] add config for Ansible/document them somewhere
         - [ ] DNS/host names of Pis?
     - [ ] installing OS/flashing SD card
-    - [ ] SSH setup (password vs key based), how far can this be automated?
+    - [ ] [SSH setup (password vs key based), how far can this be automated?](SSH-Setup.md)
     - [ ] ansible setup on control node and Python on managed node
     - [ ] sensible user management?
 - [ ] k3s setup
