@@ -4,6 +4,8 @@ The goal of this repository is to contain all the administration tasks of the Ra
 
 The idea is to start with collecting all necessary tasks. Writing up some details about them, describe necessary (manual) steps and eventually code it with Ansible playbooks to make the tasks repeatable and declarative
 
+> This is supposed to be a learning exercise for me in my non-critical home environment. Thus I will "reinvent the wheel" and hack a lot and *not* only use battle-tested solutions. But if you are interested in this journey and can also learn something from it, great!
+
 ## Tasks, Todos and Questions
 
 This is the first step: listing all tasks I need to perform (list might grow over time). I will check them off once I have collected details about and described the task so that I can repeat it easily (not necessarily with Ansible). 
