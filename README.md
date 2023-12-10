@@ -13,6 +13,7 @@ This is the first step: listing all tasks I need to perform (list might grow ove
 - [ ] prerequisites
     - [ ] giving fixed IP addresses. Only possible via Router?
         - [ ] add config for Ansible/document them somewhere
+        - [ ] DNS/host names of Pis?
     - [ ] installing OS/flashing SD card
     - [ ] SSH setup (password vs key based), how far can this be automated?
     - [ ] ansible setup on control node and Python on managed node
@@ -26,3 +27,5 @@ This is the first step: listing all tasks I need to perform (list might grow ove
 - [ ] monitoring and logging setup (Grafana? Resource monitoring setup?)
 - [ ] installing desired helm charts? Maybe maintain list of wanted helm charts somewhere?
 - [ ] optional: remote management possibilities?
+- [ ] document network topology (also visually)
+- [ ] document (baseline) software topology (Pi-Hole, monitoring infra etc.)
