@@ -14,9 +14,12 @@ This is the first step: listing all tasks I need to perform (list might grow ove
     - [ ] installing OS/flashing SD card
     - [ ] SSH setup (password vs key based), how far can this be automated?
     - [ ] ansible setup on control node and Python on managed node
+    - [ ] sensible user management?
 - [ ] k3s setup
+    - [ ] Pi config (memory and something else?) for k3s
     - [ ] installing k3s (control plane or worker node)
     - [ ] ability to uninstall
     - [ ] repair, diagnose (logs, systemctl restart etc.?)
+    - [ ] permissions/security? need to read up on this
 - [ ] monitoring and logging setup (Grafana? Resource monitoring setup?)
 - [ ] installing desired helm charts? Maybe maintain list of wanted helm charts somewhere?
