@@ -18,6 +18,7 @@ This is the first step: listing all tasks I need to perform (list might grow ove
     - [ ] [SSH setup (password vs key based), how far can this be automated?](SSH-Setup.md)
     - [ ] ansible setup on control node and Python on managed node
     - [ ] sensible user management?
+    - [ ] some words about network setup (also see network topology but here for Pi: like disabling Wifi with dt-overlay etc.)
 - [ ] k3s setup
     - [ ] Pi config (memory and something else?) for k3s
     - [ ] installing k3s (control plane or worker node)
