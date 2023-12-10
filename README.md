@@ -25,3 +25,4 @@ This is the first step: listing all tasks I need to perform (list might grow ove
     - [ ] permissions/security? need to read up on this
 - [ ] monitoring and logging setup (Grafana? Resource monitoring setup?)
 - [ ] installing desired helm charts? Maybe maintain list of wanted helm charts somewhere?
+- [ ] optional: remote management possibilities?
