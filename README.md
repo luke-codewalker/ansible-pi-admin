@@ -1,4 +1,4 @@
-# Ansible Pi Admin
+# My Pi cluster
 
 The goal of this repository is to contain all the administration tasks of the Raspberry Pis floating around my network and the eventual automatization of these tasks with Ansible. 
 
