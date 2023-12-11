@@ -10,6 +10,7 @@ The idea is to start with collecting all necessary tasks. Writing up some detail
 
 This is the first step: listing all tasks I need to perform (list might grow over time). I will check them off once I have collected details about and described the task so that I can repeat it easily (not necessarily with Ansible). 
 
+- [ ] hardware setup (do I want/need to document that?): which Pi version, SD card, POE+ Hat etc.
 - [ ] prerequisites
     - [ ] giving fixed IP addresses. Only possible via Router?
         - [ ] add config for Ansible/document them somewhere
@@ -25,6 +26,7 @@ This is the first step: listing all tasks I need to perform (list might grow ove
     - [ ] ability to uninstall
     - [ ] repair, diagnose (logs, systemctl restart etc.?)
     - [ ] permissions/security? need to read up on this
+- [ ] SSL certificates?
 - [ ] monitoring and logging setup (Grafana? Resource monitoring setup?)
 - [ ] installing desired helm charts? Maybe maintain list of wanted helm charts somewhere?
 - [ ] optional: remote management possibilities?
