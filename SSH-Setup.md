@@ -21,6 +21,7 @@ In particular I will add key-based SSH without a password on the private key. Wh
         UsePAM no
         PubkeyAuthentication yes
         ```
+5. Reload the SSH daemon so these changes take effect `sudo systemctl reload sshd`
 
 ### Troubleshooting and miscellaneous tips
 
