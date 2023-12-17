@@ -10,8 +10,9 @@ The idea is to start with collecting all necessary tasks. Writing up some detail
 
 This is the first step: listing all tasks I need to perform (list might grow over time). I will check them off once I have collected details about and described the task so that I can repeat it easily (not necessarily with Ansible). 
 
-- [ ] hardware setup (do I want/need to document that?): which Pi version, SD card, PoE Hat etc.
+- [ ] hardware setup and configuration (do I want/need to document that?): which Pi version, SD card, PoE Hat etc.
     - [ ] Power and internet for the Pi via [PoE HAT](PoE-HAT.md)
+    - [ ] Turning off Wifi, Bluetooth and HDMI (?) to [save power](Power-saving.md)
 - [ ] prerequisites
     - [ ] giving fixed IP addresses. Only possible via Router?
         - [ ] add config for Ansible/document them somewhere
