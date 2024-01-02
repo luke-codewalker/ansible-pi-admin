@@ -1,0 +1,21 @@
+---
+- name: Modify PoE Fan Speeds Configuration for Pi 4
+  hosts: pi4
+  become: yes
+
+  tasks:
+    - name: Append PoE Fan Speed Configurations to /boot/config.txt
+      lineinfile:
+        path: /boot/config.txt
+        line: "{{ item }}"
+      loop:
+        - "dtparam=poe_fan_temp0=50000"
+        - "dtparam=poe_fan_temp1=60000"
+        - "dtparam=poe_fan_temp2=70000"
+        - "dtparam=poe_fan_temp3=80000"
+
+    - name: Reboot Pi 4 to Apply Changes
+      command: sudo reboot
+      async: 0
+      poll: 0
+      ignore_errors: true
