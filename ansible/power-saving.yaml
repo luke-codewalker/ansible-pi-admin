@@ -1,0 +1,19 @@
+---
+- name: Turn of BT and Wifi to save power on all devices
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Append configurations to /boot/config.txt
+      lineinfile:
+        path: /boot/config.txt
+        line: "{{ item }}"
+      loop:
+        - "dtoverlay=disable-wifi"
+        - "dtoverlay=disable-bt"
+
+    - name: Reboot Pi 4 to Apply Changes
+      command: sudo reboot
+      async: 0
+      poll: 0
+      ignore_errors: true
