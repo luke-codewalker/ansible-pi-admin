@@ -1,0 +1,13 @@
+repositories:
+  - name: grafana
+    url: https://grafana.github.io/helm-charts
+
+releases:
+  - name: grafana
+    chart: grafana/grafana
+    atomic: true
+    cleanupOnFail: true
+    namespace: grafana
+    createNamespace: true
+    values:
+      - "./grafana-values.yaml"
