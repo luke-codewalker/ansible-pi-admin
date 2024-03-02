@@ -9,10 +9,13 @@ not automatically mounted:
 - ssh into device
 - create a mount point like so: `sudo mkdir /media/usb`
 - list all attached storage with `sudo blkid` and look for the USB stick (in my
-  case upper USB 3.0 port was `/dev/sda1`)
+  case upper USB 3.0 port was `/dev/sda1`), note the `PARTUUID` or `UUID` value
 - format the USB drive to a filesystem Longhorn can use
   `sudo mkfs.ext4 /dev/sda1`
-- mount the device: `sudo mount /dev/sda1 /media/usb`
+- you can mount the device adhoc with: `sudo mount /dev/sda1 /media/usb`
+- to persist the configuration (survive reboot) add an entry to `/etc/fstab`
+  like this (you can use `UUID` as well):
+  `PARTUUID=<PARTUUID> /media/usb ext4 defaults,noatime,nodiratime 0 2`
 
 ## Longhorn
 
