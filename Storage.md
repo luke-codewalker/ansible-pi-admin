@@ -37,7 +37,8 @@ configured the USB sticks as the only drives (via the UI).
   they couldn't reach their desired replica count which is 3 by default. To
   adjust this edit the config map of the longhorn storage class with
   `kubectl edit configmap longhorn-storageclass -n longhorn-system` and adjust
-  `parameters.numberOfReplicas`
+  `parameters.numberOfReplicas` (or persistence.defaultClassReplicaCount: 2 in
+  longhorn helm chart config)
 
 ## Sources
 

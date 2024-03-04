@@ -1,0 +1,7 @@
+ingress:
+  enabled: true
+
+persistence:
+  size: 5Gi
+  enabled: true
+  storageClass: longhorn

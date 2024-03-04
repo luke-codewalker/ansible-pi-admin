@@ -1,13 +1,50 @@
 repositories:
   - name: grafana
     url: https://grafana.github.io/helm-charts
+  - name: portainer
+    url: https://portainer.github.io/k8s/
+  - name: longhorn
+    url: https://charts.longhorn.io
 
 releases:
+  - name: longhorn
+    chart: longhorn/longhorn
+    atomic: true
+    cleanupOnFail: true
+    namespace: longhorn-system
+    createNamespace: true
+    values:
+      - "./values/longhorn.yaml"
+
+  - name: longhorn-ingress
+    namespace: longhorn-system
+    needs:
+      - longhorn-system/longhorn
+    chart: "./longhorn-manifests"
+
   - name: grafana
+    needs:
+      - longhorn-system/longhorn
     chart: grafana/grafana
     atomic: true
     cleanupOnFail: true
     namespace: grafana
     createNamespace: true
     values:
-      - "./grafana-values.yaml"
+      - "./values/grafana.yaml"
+
+  - name: portainer
+    needs:
+      - longhorn-system/longhorn
+    chart: portainer/portainer
+    atomic: true
+    cleanupOnFail: true
+    namespace: portainer
+    createNamespace: true
+    set:
+      - name: ingress.hosts[0].host
+        value: portainer.raspberrypi.local
+      - name: ingress.hosts[0].paths[0].path
+        value: /
+    values:
+      - "./values/portainer.yaml"
