@@ -5,6 +5,8 @@ repositories:
     url: https://portainer.github.io/k8s/
   - name: longhorn
     url: https://charts.longhorn.io
+  - name: luke-codewalker
+    url: https://luke-codewalker.github.io/helm-charts
 
 releases:
   - name: longhorn
@@ -48,3 +50,19 @@ releases:
         value: /
     values:
       - "./values/portainer.yaml"
+
+  - name: pi-home
+    chart: luke-codewalker/pi-home
+    namespace: pi-home
+    createNamespace: true
+    set:
+      - name: host
+        value: raspberrypi.local
+
+  - name: progress-tracker
+    chart: luke-codewalker/progress-tracker
+    namespace: progress-tracker
+    createNamespace: true
+    set:
+      - name: host
+        value: raspberrypi.local
