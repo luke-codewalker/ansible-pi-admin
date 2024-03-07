@@ -5,6 +5,8 @@ repositories:
     url: https://portainer.github.io/k8s/
   - name: longhorn
     url: https://charts.longhorn.io
+  - name: argo
+    url: https://argoproj.github.io/argo-helm
 
 releases:
   - name: longhorn
@@ -15,6 +17,15 @@ releases:
     createNamespace: true
     values:
       - "./values/longhorn.yaml"
+
+  - name: argo
+    atomic: true
+    cleanupOnFail: true
+    namespace: argocd
+    createNamespace: true
+    chart: argo/argo-cd
+    values:
+      - "./values/argo.yaml"
 
   - name: longhorn-ingress
     namespace: longhorn-system

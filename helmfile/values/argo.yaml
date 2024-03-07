@@ -1,0 +1,13 @@
+global:
+  domain: argocd.raspberrypi.local
+
+config:
+  params:
+    server.insecure: true
+
+server:
+  extraArgs:
+    - --insecure
+  ingress:
+    enabled: true
+    ingressClassName: "traefik"
