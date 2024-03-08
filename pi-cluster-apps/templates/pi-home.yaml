@@ -14,8 +14,8 @@ spec:
     chart: pi-home
     repoURL: https://luke-codewalker.github.io/helm-charts/
     targetRevision: 0.2.0
-    syncPolicy:
-      automated: {}
     helm:
       values: |
         host: raspberrypi.local
+  syncPolicy:
+    automated: {}
