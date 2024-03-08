@@ -15,9 +15,7 @@ spec:
     repoURL: https://luke-codewalker.github.io/helm-charts/
     targetRevision: 0.2.0
     syncPolicy:
-      automated:
-        selfHeal: true
-        prune: true
+      automated: {}
     helm:
       values: |
         host: raspberrypi.local
