@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: pi-home
+  namespace: { { .Values.spec.namespace } }
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: { { .Values.spec.namespace } }
+    name: { { .Values.spec.destination.name } }
+  project: default
+  source:
+    chart: pi-home
+    repoURL: https://luke-codewalker.github.io/helm-charts/
+    targetRevision: 0.2.0
+    helm:
+      values: |
+        host: raspberrypi.local
