@@ -1,6 +1,4 @@
 repositories:
-  - name: grafana
-    url: https://grafana.github.io/helm-charts
   - name: portainer
     url: https://portainer.github.io/k8s/
   - name: longhorn
@@ -32,17 +30,6 @@ releases:
     needs:
       - longhorn-system/longhorn
     chart: "./longhorn-manifests"
-
-  - name: grafana
-    needs:
-      - longhorn-system/longhorn
-    chart: grafana/grafana
-    atomic: true
-    cleanupOnFail: true
-    namespace: grafana
-    createNamespace: true
-    values:
-      - "./values/grafana.yaml"
 
   - name: portainer
     needs:
