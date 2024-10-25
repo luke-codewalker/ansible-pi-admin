@@ -13,7 +13,7 @@ spec:
   source:
     chart: pi-home
     repoURL: https://luke-codewalker.github.io/helm-charts/
-    targetRevision: HEAD
+    targetRevision: 0.3.0
     helm:
       values: |
         host: raspberrypi.local
