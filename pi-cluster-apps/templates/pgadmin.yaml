@@ -18,8 +18,11 @@ spec:
       values: |
         ingress:
             enabled: true
-            hosts: ["pgadmin.raspberrypi.local"]
-            ingressClassName: "traefik"
+        hosts:
+            host: "pgadmin.raspberrypi.local"
+            paths:
+                - /
+        ingressClassName: "traefik"
   syncPolicy:
     automated:
       prune: true
