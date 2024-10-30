@@ -21,7 +21,8 @@ spec:
         hosts:
           - host: "pgadmin.raspberrypi.local"
             paths:
-              - /
+              - path: /
+                pathType: Prefix
         ingressClassName: "traefik"
   syncPolicy:
     automated:
