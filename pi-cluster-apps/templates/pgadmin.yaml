@@ -18,7 +18,7 @@ spec:
       values: |
         ingress:
           enabled: true
-          ingressClassName: ""
+          ingressClassName: "traefik"
           hosts:
             - host: pgadmin.raspberrypi.local
               paths:
