@@ -20,7 +20,7 @@ spec:
           enabled: true
           ingressClassName: ""
           hosts:
-            - host: pgadmin.raspberrypi.local/
+            - host: pgadmin.raspberrypi.local
               paths:
                 - path: /
                   pathType: Prefix
