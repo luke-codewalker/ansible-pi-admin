@@ -1,19 +1,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: postgres
+  name: grafana
   namespace: {{ .Values.namespace }}
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: postgres
+    namespace: monitoring
     name: {{ .Values.spec.destination.name }}
   project: default
   sources:
-  - repoURL: https://grafana.github.io/helm-charts
-    chart: grafana
-    targetRevision: 7.3.3
+  - repoURL: oci://registry-1.docker.io/bitnamicharts
+    chart: postgresql
+    targetRevision: 16.1.0
     helm:
       values: |
         ingress:

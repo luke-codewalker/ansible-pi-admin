@@ -1,24 +1,24 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: grafana
+  name: postgres
   namespace: {{ .Values.namespace }}
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: monitoring
+    namespace: postgres
     name: {{ .Values.spec.destination.name }}
   project: default
   sources:
-  - repoURL: oci://registry-1.docker.io/bitnamicharts
-    chart: postgresql
-    targetRevision: 16.1.0
+  - repoURL: https://grafana.github.io/helm-charts
+    chart: grafana
+    targetRevision: 7.3.3
     helm:
       values: |
         ingress:
             enabled: true
-            hosts: ["postgres.raspberrypi.local"]
+            hosts: ["grafana.raspberrypi.local"]
             ingressClassName: "traefik"
         persistence:
             enabled: true
