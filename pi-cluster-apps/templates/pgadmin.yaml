@@ -19,7 +19,7 @@ spec:
         ingress:
             enabled: true
         hosts:
-          - host: "pgadmin.raspberrypi.local"
+          - host: pgadmin.raspberrypi.local
             paths:
               - path: /
                 pathType: Prefix
