@@ -1,0 +1,27 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: pgadmin
+  namespace: {{ .Values.namespace }}
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: postgres
+    name: {{ .Values.spec.destination.name }}
+  project: default
+  sources:
+  - repoURL: https://helm.runix.net
+    chart: runix/pgadmin4
+    targetRevision: 1.31.0
+    helm:
+      values: |
+        ingress:
+            enabled: true
+            hosts: ["pgadmin.raspberrypi.local"]
+            ingressClassName: "traefik"
+  syncPolicy:
+    automated:
+      prune: true
+    syncOptions:
+    - CreateNamespace=true
