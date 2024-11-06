@@ -13,11 +13,13 @@ spec:
   source:
     chart: psql-app-test
     repoURL: https://luke-codewalker.github.io/helm-charts/
-    targetRevision: 0.4.4
+    targetRevision: 0.4.5
     helm:
       values: |
         host: raspberrypi.local
         port: 2024
+        image:
+          tag: 1.0.1
 
   syncPolicy:
     automated:
