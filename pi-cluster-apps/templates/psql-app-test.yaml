@@ -1,0 +1,27 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: psql-app-test
+  namespace: {{ .Values.namespace }}
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: psql-app-test
+    name: {{ .Values.spec.destination.name }}
+  project: default
+  source:
+    chart: psql-app-test
+    repoURL: https://luke-codewalker.github.io/helm-charts/
+    targetRevision: 0.3.0
+    helm:
+      values: |
+        host: raspberrypi.local
+        port: 2024
+        databaseUrl: postgresql://app-test:1234@postgres-postgresql.postgres.svc.cluster.local:5432/app-test?schema=public
+
+  syncPolicy:
+    automated:
+      prune: true
+    syncOptions:
+    - CreateNamespace=true
