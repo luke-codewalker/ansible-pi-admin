@@ -19,7 +19,7 @@ spec:
         host: raspberrypi.local
         port: 2024
         image:
-          tag: 1.0.1
+          tag: 1.1.1
 
   syncPolicy:
     automated:
