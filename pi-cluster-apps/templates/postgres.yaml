@@ -14,6 +14,13 @@ spec:
   - repoURL: registry-1.docker.io/bitnamicharts
     chart: postgresql
     targetRevision: 16.1.0
+    helm:
+      values: |
+        global:
+          defaultStorageClass: longhorn
+        primary:
+          persistence:
+            size: 2.5Gi
   syncPolicy:
     automated:
       prune: true

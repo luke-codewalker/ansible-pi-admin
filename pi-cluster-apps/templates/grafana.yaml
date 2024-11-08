@@ -24,7 +24,7 @@ spec:
             enabled: true
             type: pvc
             storageClassName: longhorn
-            size: 5Gi
+            size: 2Gi
   syncPolicy:
     automated:
       prune: true

@@ -24,6 +24,8 @@ spec:
               paths:
                 - path: /
                   pathType: Prefix
+        persistentVolume:
+          size: 1Gi
   syncPolicy:
     automated:
       prune: true
