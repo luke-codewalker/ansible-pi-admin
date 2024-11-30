@@ -13,7 +13,7 @@ spec:
   source:
     chart: home-weather-stations-api
     repoURL: https://luke-codewalker.github.io/helm-charts/
-    targetRevision: 0.1.1
+    targetRevision: 0.1.2
     helm:
       values: |
         host: raspberrypi.local
