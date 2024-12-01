@@ -16,7 +16,7 @@ spec:
     targetRevision: 0.1.9
     helm:
       values: |
-        host: raspberrypi.local
+        host: pi.cluster
 
   syncPolicy:
     automated:
