@@ -12,7 +12,7 @@ spec:
   project: default
   sources:
   - repoURL:  https://helm.influxdata.com/
-    chart: influxdata/influxdb2
+    chart: influxdb2
     targetRevision: 2.1.2
     helm:
       values: |
