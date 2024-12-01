@@ -20,6 +20,7 @@ Device ---> Pi Hole ---> Router ---> unknown public DNS servers
 - set up Local DNS entry to point `raspberrypi.local` to Pi 4's IP to keep using
   services with old "domain"
   - possibility for split DNS in the future
+  - added `pi.cluster` as address to avoid confusion with mDNS domains, triggered by ESP2866 having issues with resolving the domain
 
 ## Sources
 
