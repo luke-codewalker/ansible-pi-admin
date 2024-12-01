@@ -1,25 +1,25 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: home-weather-stations-api
-  namespace: {{ .Values.namespace }}
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-spec:
-  destination:
-    namespace: home-weather-stations-api
-    name: {{ .Values.spec.destination.name }}
-  project: default
-  source:
-    chart: home-weather-stations-api
-    repoURL: https://luke-codewalker.github.io/helm-charts/
-    targetRevision: 0.1.5
-    helm:
-      values: |
-        host: raspberrypi.local
+# apiVersion: argoproj.io/v1alpha1
+# kind: Application
+# metadata:
+#   name: home-weather-stations-api
+#   namespace: {{ .Values.namespace }}
+#   finalizers:
+#     - resources-finalizer.argocd.argoproj.io
+# spec:
+#   destination:
+#     namespace: home-weather-stations-api
+#     name: {{ .Values.spec.destination.name }}
+#   project: default
+#   source:
+#     chart: home-weather-stations-api
+#     repoURL: https://luke-codewalker.github.io/helm-charts/
+#     targetRevision: 0.1.5
+#     helm:
+#       values: |
+#         host: raspberrypi.local
 
-  syncPolicy:
-    automated:
-      prune: true
-    syncOptions:
-    - CreateNamespace=true
+#   syncPolicy:
+#     automated:
+#       prune: true
+#     syncOptions:
+#     - CreateNamespace=true
