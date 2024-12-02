@@ -19,8 +19,9 @@ spec:
             server:
               service:
                 type: LoadBalancer
-            persistentVolume:
-              size: 2Gi
+              retention: "7d"
+              persistentVolume:
+                size: 8Gi
             alertmanager:
               persistence:
                 size: 250Mi
