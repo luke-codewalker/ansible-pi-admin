@@ -21,7 +21,7 @@ spec:
                 type: LoadBalancer
               retention: "2d"
               persistentVolume:
-                size: 8Gi
+                size: 10Gi
             alertmanager:
               persistence:
                 size: 250Mi
